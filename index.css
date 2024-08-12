@@ -1,0 +1,436 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+:root{
+    --btnColor:rgb(21, 153, 230);
+    --mainColor: rgb(245,245,245) ;
+}
+
+nav{
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gainsboro;
+}
+nav ul.navList{
+    list-style: none;
+    display:flex ;
+    gap: 20px;
+    justify-content: space-between;
+    font-size: 18px;
+    cursor: pointer;
+}
+nav ul.navList li:hover{
+    color: var(--btnColor);
+
+}
+nav .logo{
+    display: flex;
+    align-items: center;
+}
+nav .logo h2{
+    text-transform: uppercase;
+}
+nav .logo img{
+    width: 40px;
+}
+nav button{
+    background-color:var(--btnColor) ;
+    padding: 10px;
+    width: 110px;
+    border-style: none;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+nav button:hover{
+    background-color: black;
+}
+.main-section{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url('Images/1131585.jpg');
+    background-repeat: no-repeat;
+    background-size: 1350px 373px ;
+    color: white;
+    text-transform: capitalize;
+    padding:88px;
+
+}
+.main-section .text{
+    padding: 30px;
+    text-align: center;
+    margin: auto;
+}
+.main-section .text .mainText{
+    width: 300px;
+    margin: auto;
+}
+.main-section .text .main-title{
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.explore{
+    margin: auto;
+    width: 700px;
+    display: grid;
+    grid-template-columns: 250px 150px 150px 180px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 14px;
+    align-items: center;
+}
+.explore .search,
+.explore .check-in,
+.explore .check-out,
+.explore .btncard{
+   color: black;
+}
+.explore .search,
+.explore .check-in{
+    border-right: 1px solid gainsboro;
+    line-height: 20px;
+}
+.explore .search  span,
+.explore .check-in  span,
+.explore .check-out  span{
+    color: gainsboro;
+
+}
+.explore .search svg{
+    color: gainsboro;
+}
+.explore .btncard button{
+    padding: 10px;
+    background-color: var(--btnColor);
+    color: white;
+    margin: auto;
+    width: 128px;
+    border-style: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.explore .btncard button:hover{
+    background-color: black;
+}
+.explore .check-out{
+    margin-left: 10px;
+    line-height: 20px;
+}
+.explore .check-in{
+    text-align: center;
+}
+.cards{
+    margin: 40px 0px;
+}
+.cards .cardOrg{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 33px;
+    
+}
+.cards .price, 
+.cards .safe, 
+.cards .payment,
+.cards .find{margin-top: 20px;  
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    text-transform: capitalize;
+    line-height: 20px;
+    box-shadow: 10px 10px rgba(245, 245,245,0.5);
+    cursor: pointer;
+}
+.cards .price .icons svg, 
+.cards .safe .icons svg, 
+.cards .payment .icons svg,
+.cards .find .icons svg{
+    font-size: 25px;
+}
+.cards .price .icons , 
+.cards .safe .icons , 
+.cards .payment .icons ,
+.cards .find .icons{
+    background-color: rgb(245, 245,245);
+    width: fit-content;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+.recommend{
+    padding: 45px;
+    margin: 30px 20px 20px ;
+    margin: auto;
+    text-transform: capitalize;
+    background-color: var(--mainColor);
+    
+}
+.recommend h1{
+     text-align: center;
+     
+}
+.recommend ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    
+}
+.recommend ul li{
+    position: relative;
+    cursor: pointer;
+}
+.recommend ul li:not(li.black)::after{
+    content: "";
+    background-color: gainsboro;
+    width: 170px;
+    height: 2px;
+    position: absolute;
+    margin-top: 30px;
+    left:-5px;
+}
+.recommend ul li.black::after{
+    content: "";
+    background-color: black;
+    width: 155px;
+    height: 2px;
+    position: absolute;
+    margin-top: 30px;
+    left: 0px;
+}
+.recommend .places{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 66px;
+    gap:60px;
+}
+.recommend .places .cardPlace{
+    width: 300px;
+    cursor: pointer;
+}
+.recommend .places .cardPlace:hover .adr{
+        
+
+}
+.recommend .places .cardPlace:not(img):hover{
+    border: 1px solid black;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.recommend .places .cardPlace img{
+    width: 300px;
+    border-radius: 8px;
+}
+.recommend .places .cardPlace .adr{
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+.recommend .places .cardPlace .orgIcon .icons{
+    display: flex;
+    justify-content: space-between; 
+    margin-bottom: 10px;
+
+}
+.recommend .places .cardPlace .orgIcon .trip{
+    font-size: 14px;
+
+}
+.recommend .places .cardPlace .orgIcon .steps{
+    display: flex;
+    gap: 5px;
+}
+.recommend .places .cardPlace img{
+    width: 300px;
+    height: 174px;
+}
+.recommend .places .cardPlace .icons span span{
+    background-color: rgb(4, 4, 53);
+    border-radius: 90px;
+    padding: 3px;
+   
+}
+.recommend .places .cardPlace .icons span svg{
+    font-size: 14px;
+}
+.recommend .places .cardPlace .orgIcon .trip{
+    display: flex;
+    justify-content: space-between
+}.blog {
+    padding: 65px;
+    margin: 30px 20px 20px ;
+    margin: auto;
+}
+.blogCard{
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 170px 170px;
+    padding: 57px;
+    margin: 0px 56px;
+    gap: 15px;
+    height: 360px;
+}
+.blog .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: -20px;
+}
+.blog .blogCard .larger{
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0,0, 0.3),rgba(0, 0,0, 0.3)),url('Images/download (6).jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.blog .blogCard .larger:hover,
+.blog .blogCard .smaller-Fcard:hover,
+.blog .blogCard .smaller-Scard:hover{
+    cursor: pointer;
+    border: 1px solid black;
+}
+.blog .blogCard .smaller-Fcard{
+    background-image: linear-gradient(rgba(41, 30, 30, 0.3),rgba(0, 0,0, 0.3)),url('Images/download (8).jpg');
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.blog .blogCard .smaller-Scard{
+    background-image: linear-gradient(rgba(0, 0,0, 0.3),rgba(0, 0,0, 0.3)),url('Images/download (7).jpg');
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.blog .blogCard .smaller-Fcard,
+.blog .blogCard .smaller-Scard{
+    position: relative;
+    background-repeat:no-repeat ;
+    background-size: 500px 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+}
+/*
+.blog .blogCard .smaller{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}*/
+.blog .blogCard .larger img{
+    z-index: 1;
+    width: 500px;
+}
+.blog .blogCard .larger .largerTxt{
+    z-index: 2;
+    position: absolute;
+    padding: 25px;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize;
+    width: 378px;
+    text-align: center;
+    margin: auto;
+}
+.blog .blogCard .smaller-Fcard .smallerTxt,
+.blog .blogCard .smaller-Scard .smallerTxt{
+    z-index: 2;
+    position: absolute;
+    padding: 20px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: capitalize;
+    width: 323px;
+}
+footer{
+    padding: 20px;
+}
+footer .footeritem{
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
+    margin: 36px;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(225,232,248);
+}
+footer .footeritem .footIcon{
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+}
+footer .footeritem .footIcon svg{
+    color: #000;
+}
+footer .footeritem .footIcon svg:hover{
+    color: var(--btnColor);
+}
+footer ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+footer ul li:hover{
+    color: var(--btnColor);
+}
+.customer{
+    padding: 20px;
+    margin: 50px 0px;
+}
+.customer h2{
+    text-align: center;
+    text-transform: capitalize;
+}
+.customer .custCards{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 35px;
+}
+.customer .custCards img{
+    width: 30px;
+}
+.customer .custCards .custTxt{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.customer .custCards .custTxt svg{
+    font-size: 35px;
+}
+.customer .custCards .custTxt .icon{
+    margin-top: -11px;
+}
+.customer .custCards .email{
+    display: flex;
+    gap: 10px;
+}
+.customer .custCards .email img{
+    border-radius: 30px;
+}
+.customer .custCards .second-cust,
+.customer .custCards .first-cust{
+    background-color: white;
+    box-shadow: 0 0 20px 1px rgb(167 156 156);
+    padding: 30px;
+    width: 450px;
+}
+.customer .custCards .email span{
+    color: rgb(214, 213, 213);
+}
